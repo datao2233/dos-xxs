@@ -36,6 +36,7 @@ except Exception as error:
 	   os.system('rd /s/q %s' % s_dir)
 print("刷取完成，已删除临时文件")
 if shit==2:
+#特么的，就这特么鬼地方给特么我改了4个多小时
    print("正在通过云端获取链接")
    time.sleep(0.5)
    URL = 'https://api.datao2233.top/index.json'
