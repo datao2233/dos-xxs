@@ -37,7 +37,7 @@ if shit==1:
 if shit==2:
    print("正在通过云端获取链接")
    time.sleep(0.5)
-   URL = 'https://api.datao2233.top/index.json'
+   URL = 'https://cdn-pyxxs.datao2233.top/index.json'
    def fetch_data(url):
        req = request.Request(url)
        with request.urlopen(req) as f:
