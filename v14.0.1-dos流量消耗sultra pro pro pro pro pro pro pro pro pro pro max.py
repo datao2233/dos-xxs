@@ -38,11 +38,12 @@ if shit==2:
    print("正在通过云端获取链接")
    time.sleep(0.5)
    URL = 'https://cdn-pyxxs.datao2233.top/index.json'
-   def fetch_data(url):
-       req = request.Request(url)
-       with request.urlopen(req) as f:
-        return json.loads(f.read().decode('utf-8')) 
-   data = fetch_data(URL)
+   headers2 = {
+            'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36'
+               }
+   url = requests.get(URL,headers=headers2)
+   text = url.text
+   data = json.loads(text)
    urls=data['urls']
    nubls=data['nubl']
    nubl=int(nubls)
@@ -51,7 +52,7 @@ if shit==2:
    for i in range(nubl):
       headers = {
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36'
-         }
+      }
       r=requests.get(url=urls,headers=headers)
       print(r)
       f=open(r'D:\\dataokill01\1.jpg',mode='wb')
